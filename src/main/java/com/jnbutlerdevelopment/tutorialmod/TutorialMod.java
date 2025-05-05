@@ -1,6 +1,7 @@
 package com.jnbutlerdevelopment.tutorialmod;
 
 import com.jnbutlerdevelopment.tutorialmod.block.ModBlocks;
+import com.jnbutlerdevelopment.tutorialmod.item.ModCreativeModeTabs;
 import com.jnbutlerdevelopment.tutorialmod.item.ModItems;
 import com.mojang.logging.LogUtils;
 import net.minecraft.world.item.CreativeModeTabs;
@@ -28,11 +29,13 @@ public class TutorialMod {
 
     public TutorialMod() {
         IEventBus modEventBus = FMLJavaModLoadingContext.get().getModEventBus();
-        // Register the commonSetup method for modloading
+        // Register the commonSetup method for mod loading
         modEventBus.addListener(this::commonSetup);
         // Register ourselves for server and other game events we are interested in
         MinecraftForge.EVENT_BUS.register(this);
 
+
+        ModCreativeModeTabs.register(modEventBus);
         ModItems.register(modEventBus);
         ModBlocks.register(modEventBus);
 
