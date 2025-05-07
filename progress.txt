@@ -1,3 +1,4 @@
 So far have completed video #3 Custom Blocks
 video #4 Added Custom Creative Mode Tabs
 video #5 Added Recipes and Loot tables and two new blocks alexandrite_ore and alexandrite_deepslate_ore.
+video #6 Added a custom item called Chisel
